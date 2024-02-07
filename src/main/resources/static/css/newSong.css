@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background color */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://github.com/AbishekSetty/TuneHub-images/blob/main/addSong.jpg?raw=true");
+    background-size: cover; /* Make the background image cover the entire body */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    height: 90%;
+    width: 90%;
+}
+form {
+    max-width: 350px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 26%;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: #d2b300;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: orange;
+    color: black;
+}

@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://github.com/AbishekSetty/TuneHub-images/blob/main/favorite.jpg?raw=true') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+ul {
+    max-width: 500px;
+    list-style-type: none;
+    padding-top: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+li {
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+li:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+audio {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+audio:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+}

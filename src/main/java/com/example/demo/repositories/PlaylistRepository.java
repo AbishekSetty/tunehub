@@ -6,4 +6,10 @@ import com.example.demo.entities.Playlist;
 
 public interface PlaylistRepository extends JpaRepository<Playlist, Integer>{
 
+	Playlist getPlaylistById(int playlistId);
+
+	
+
+	
+
 }

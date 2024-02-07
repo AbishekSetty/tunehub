@@ -37,5 +37,20 @@ public class SongServiceImplementation
 	public void updateSong(Song song) {
 		repo.save(song);
 	}
+	@Override
+	public Song getSongById(int songId) {
+		return repo.getSongById(songId);
+	}
+	@Override
+	public void deleteSong(Song songToDelete) {
+		repo.delete(songToDelete);		
+	}
+	@Override
+	public List<Song> getSongsByIds(int[] songIds) {
+		// TODO Auto-generated method stub
+		return repo.findAll();
+	}
+	
+	
 
 }

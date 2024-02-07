@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://github.com/AbishekSetty/TuneHub-images/blob/main/viewsongs.jpg?raw=true') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Use viewport height for full screen height */
+    width: 100vw; /* Use viewport width for full screen width */
+}
+
+table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    background-color: rgba(225, 225, 225, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: orange;
+    color: black;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5; /* Light gray on hover */
+}
+
+audio {
+    width: 100%;
+}

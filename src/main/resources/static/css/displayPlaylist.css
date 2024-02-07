@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://github.com/AbishekSetty/TuneHub-images/blob/main/createplaylist.jpg?raw=true') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Use viewport height for full screen height */
+    width: 100vw; /* Use viewport width for full screen width */
+}
+
+table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+   background-color: orange;
+    color: black;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #ffcb6a; 
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+audio {
+    width: 100%;
+    margin-top: 5px;
+}
+

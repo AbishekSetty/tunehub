@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Edit Favorite</title>
+</head>
+<body>
+	<form action="deleteFavorite" method="post">
+		<table border>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Select</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="song:${songs}">
+					<td th:text="${song.name}"></td>
+					<td>
+						<input type="checkbox" th:name="selectedSongs" th:value="${song.id}">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<button type="submit" >Delete Selected</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title> Delete Playlist</title>
+    <link rel="stylesheet" th:href="@{/css/deletePlaylist.css}">
+</head>
+<body>
+
+
+    <form action="deleteSelectedPlaylist" method="post">
+        <table border>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Select</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="playlist : ${allplaylist}">
+                <td th:text="${playlist.id}"></td>
+                <td th:text="${playlist.name}"></td>
+                <td>
+                    <input type="checkbox" th:name="selectedPlaylists" th:value="${playlist.id}"/>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <button type="submit" ><img src="https://github.com/AbishekSetty/TuneHub-images/blob/main/deletebutton.jpg?raw=true"></button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+
+form {
+    max-width: 50%;
+    margin: 0 auto;
+    background-color: rgba(225,225,225,0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: orange;
+    color: black;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://github.com/AbishekSetty/TuneHub-images/blob/main/favorite.jpg?raw=true') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+button:hover{
+	  background-color: black;
+    color: #d2b300;
+}
+button {
+    background-color: orange;
+    color: black;
+}

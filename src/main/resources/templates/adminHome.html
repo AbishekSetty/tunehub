@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>Admin Home</title>
+    <link rel="stylesheet" th:href="@{/css/adminHome.css}">
 </head>
 <body>
-<h1>Admin Home</h1>
-<a href="newSong" >Add a new song</a><br>
-<a href="viewSongs" >View all songs</a><br>
-<a href="createPlaylist">Create Playlist</a><br>
-<a href="viewPlaylist" >View all Playlists</a>
+    <nav class="navbar">
+    	<img src="https://github.com/AbishekSetty/TuneHub-images/blob/main/TuneHublogo.jpg?raw=true" alt="Tune Hub logo">
+        <br>
+        <a href="newSong">Add a new song</a>
+        <a href="viewSongs">View all songs</a>
+        <a href="createPlaylist">Create Playlist</a>
+        <a href="viewPlaylist">View all Playlists</a>
+        <a href="deletePlaylist">Delete playlists</a>
+        <a href="deleteSong">Delete songs</a>
+        <a href="logout">LOGOUT</a>
+    </nav>
+    <h1 style="text-align: center;">Admin Home</h1>
 </body>
 </html>

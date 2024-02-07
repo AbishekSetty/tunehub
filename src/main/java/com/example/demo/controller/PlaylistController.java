@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+ package com.example.demo.controller;
 
 import java.util.List;
 
@@ -10,13 +10,12 @@ import com.example.demo.entities.Playlist;
 import com.example.demo.entities.Song;
 import com.example.demo.services.PlaylistService;
 import com.example.demo.services.SongService;
+
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
-
-
 
 
 @Controller
@@ -51,11 +50,45 @@ public class PlaylistController {
 	}
 	@GetMapping("/viewPlaylist")
 	public String viewPlaylist(Model model) {
-			List<Playlist> allPlylist=playlistService.fetchAllPlaylist();
-			model.addAttribute("allplaylist", allPlylist);
+			List<Playlist> allPlaylist=playlistService.fetchAllPlaylist();
+			model.addAttribute("allplaylist", allPlaylist);
 		return "displayPlaylist";
 	}
-	
+	@GetMapping("/deletePlaylist")
+	public String deletePlaylist(Model model) {
+			List<Playlist> allPlaylist=playlistService.fetchAllPlaylist();
+			model.addAttribute("allplaylist", allPlaylist);
+			
+			
+		return "deletePlaylist";
+	}
+	@PostMapping("/deleteSelectedPlaylist")
+	public String delete(@RequestParam(name = "selectedPlaylists", required = false) int[] selectedPlaylists,  Model model) {
+		 for (int playlistId : selectedPlaylists) {
+		        Playlist playlistToDelete = playlistService.getPlaylistById(playlistId);
+		        if (playlistToDelete != null) {
+		            // Remove the playlist from associated songs
+		            List<Song> songs = playlistToDelete.getSongs();
+		            for (Song song : songs) {
+		                song.getPlaylists().remove(playlistToDelete);
+		                songService.updateSong(song);
+		            }
+
+		            // Remove the songs from the playlist
+		            playlistToDelete.getSongs().clear();
+
+		            // Delete the playlist
+		            playlistService.deletePlaylist(playlistToDelete);
+		        }
+		    }
+
+		    // Refresh the list of playlists
+		    List<Playlist> allPlaylists = playlistService.fetchAllPlaylist();
+		    model.addAttribute("allplaylist", allPlaylists);
+
+		    return "adminHome";
+		
+	}
 	
 	
 }

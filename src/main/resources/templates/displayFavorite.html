@@ -1,0 +1,26 @@
+
+<!-- displayFavorite.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Favorites</title>
+    <link rel="stylesheet" th:href="@{/css/displayFavorite.css}">
+</head>
+<body>
+
+    <ul>
+        <li th:each="favorite : ${favorites}">
+            
+            <ul>
+                <li th:each="song : ${favorite.songs}">
+                    <span th:text="${song.name}"></span>
+                    <audio controls>
+						<source th:src="${song.link}" type="audio/mpeg">
+					</audio>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

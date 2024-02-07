@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Create Favorite</title>
+<link rel="stylesheet" th:href="@{/css/createFavorite.css}">
+</head>
+<body>
+	<form action="addFavorite" method="post">
+		<table border>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Select</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="song:${songs}">
+					<td th:text="${song.name}"></td>
+					<td>
+						<input type="checkbox" th:name="selectedSongs" th:value="${song.id}">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<label>Email :<input type="email" name="email"/></label>
+		</br>
+		<button type="submit" >Add Favorite</button>
+	</form>
+</body>
+</html>

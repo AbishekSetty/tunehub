@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://github.com/AbishekSetty/TuneHub-images/blob/main/registration.jpg?raw=true') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 90%;
+    width: 90%;
+}
+
+img{
+	height: 35px;
+}
+
+.navbar {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    background-color: #333;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+
+.navbar a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}

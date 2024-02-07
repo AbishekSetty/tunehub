@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="ISO-8859-1">
+	<title>Delete Song</title>
+	<link rel="stylesheet" th:href="@{/css/deleteSong.css}">
+
+	</head>
+	<body>
+		<form action="deleteSongSelected" method="post">
+			<table border>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>Select</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="song:${songs}">
+						<td th:text="${song.id}"></td>
+						<td th:text="${song.name}"></td>
+						<td >
+							<input type="checkbox" th:name="selectedSongs" th:value="${song.id}">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+				<button type="submit" ><img src="https://github.com/AbishekSetty/TuneHub-images/blob/main/deletebutton.jpg?raw=true"></button>
+		</form>
+	</body>
+</html>

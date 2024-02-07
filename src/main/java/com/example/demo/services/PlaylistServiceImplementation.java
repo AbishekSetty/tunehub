@@ -25,4 +25,24 @@ public class PlaylistServiceImplementation implements PlaylistService {
 		return repo.findAll();
 	}
 
+
+	@Override
+	public Playlist getPlaylistById(int playlistId) {
+	return repo.getPlaylistById(playlistId);
+	}
+
+	@Override
+	public void deletePlaylist(Playlist playlistToDelete) {
+		repo.delete(playlistToDelete);
+		
+	}
+
+	@Override
+	public void updatePlaylist(Playlist playlist) {
+		repo.save(playlist);
+		
+	}
+
+	
+
 }

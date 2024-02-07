@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://github.com/AbishekSetty/TuneHub-images/blob/main/register.jpg?raw=true') no-repeat center center fixed;
+    background-size: cover;
+     background-position: center top; /* Adjusted background position to show the top */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 90%;
+    width: 90%;
+}
+h3{
+	margin-left: 9%;
+	padding-top: 25px;
+	
+}
+
+form {
+    max-width: 500px;
+    margin: 50px auto;
+    margin-left:30%;
+    margin-top:40px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+pre {
+    margin-top: 0px;
+    margin-left: 0;
+    font-size: 15px;
+    padding-top: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+label input {
+    margin-right: 5px; /* Adjust the margin to separate radio button and label */
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+	background-color: orange;
+    color: black;
+    
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: black;
+    color: #d2b300;
+}
